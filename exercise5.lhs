@@ -24,6 +24,9 @@ exercise 5.2
 (abs◦) ◦ (◦negate)		NO the function composition operator is infix
 (div◦) ◦ (◦mod)			NO
 
+We know it does not work but are not 100% sure why. The exercise sheet says not
+to waste too much time on this however.
+
 exercise 5.3
 ============
 
