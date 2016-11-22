@@ -18,8 +18,8 @@ This function has the same type but does not swap the tuple.
 
 This one is very tricky and will never terminate.
 
-> sameTypeConstOut :: (Int, Int) -> (Int, Int)
-> sameTypeConstOut = sameTypeConstOut
+> sameTypeRecursive :: (Int, Int) -> (Int, Int)
+> sameTypeRecursive = sameTypeRecursive
 
 exercise 4.2
 ============
