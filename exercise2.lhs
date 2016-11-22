@@ -26,3 +26,10 @@ We also made a function to check whether a string solely consists of whitespace.
 
 exercise 2.3
 ============
+
+exercise 2.4
+============
+
+> msg :: String
+> msg = "MHILY LZA ZBHL XBPZXBL MVYABUHL HWWPBZ JSHBKPBZ "
+>       ++ "JHLJBZ KPJABT HYJUBT LZA ULBAYVU"
