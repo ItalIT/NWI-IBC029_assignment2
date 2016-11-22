@@ -40,9 +40,9 @@ error if it is not and we add the ASCII value of the input to the ASCII value of
 
 > toDigit :: Int -> Char
 > toDigit a
->		| a < 0 = error "negative value"
->		| a > 9 = error "value too high"
->		| otherwise = (chr (ord '0' + a))
+>       | a < 0 = error "negative value"
+>       | a > 9 = error "value too high"
+>       | otherwise = (chr (ord '0' + a))
 
 exercise 2.4
 ============
