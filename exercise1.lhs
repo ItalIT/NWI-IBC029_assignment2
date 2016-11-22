@@ -23,5 +23,19 @@ return the negated argument.
 exercise 1.2
 ============
 
+The amount of total functions that take two Booleans as an input and return one Boolean is XX Here are 4 examples:
+
+> returnFirst :: (Bool, Bool) -> Bool
+> returnFirst (a, b) = a
+
+> returnSecond :: (Bool, Bool) -> Bool
+> returnSecond x = snd x
+
+> negateFirst :: (Bool, Bool) -> Bool
+> negateFirst (a, b) = (not) a == False
+
+> negateSecond :: (Bool, Bool) -> Bool
+> negateSecond (a, b) = (not) b
+
 exercise 1.3
 ============
