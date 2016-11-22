@@ -5,6 +5,8 @@ exercise 2.1
 ============
 
 > import Data.Char
+> import Data.Either
+
 > equal :: String -> String -> Bool
 > equal a b = let upperA = map toUpper a
 >                 upperB = map toUpper b
@@ -25,6 +27,22 @@ We also made a function to check whether a string solely consists of whitespace.
 
 exercise 2.3
 ============
+
+We used the build in function ord to substract the ASCII value of 0 from the
+ASCII value of the given input character to retrieve the correct integer value.
+
+> fromDigit :: Char -> Int
+> fromDigit c = ord c - ord '0'
+
+We used guards for checking whether the given input is a digit. We return an
+error if it is not and we add the ASCII value of the input to the ASCII value of
+0 if it is.
+
+> toDigit :: Int -> Char
+> toDigit a
+>		| a < 0 = error "negative value"
+>		| a > 9 = error "value too high"
+>		| otherwise = (chr (ord '0' + a))
 
 exercise 2.4
 ============
