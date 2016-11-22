@@ -9,9 +9,9 @@ Are the following expressions well-formed and well-typed?
 div                     YES
 div 7                   YES
 (div 7) 4               YES
-div (7 4)               NO
+div (7 4)               NO Because we do not knwo what to do with "7 4"
 7 ‘div‘ 4               YES IFF the ‘ are meant as backticks (difficult to see)
-+ 37                    NO
++ 37                    NO Because + is infix
 (+) 3 7                 YES
 (b, ’b’, "b")           YES
 (abs, ’abs’, "abs")     NO Because single quotes indicate characters
