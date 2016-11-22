@@ -23,7 +23,7 @@ return the negated argument.
 exercise 1.2
 ============
 
-The amount of total functions that take two Booleans as an input and return one Boolean is XX Here are 4 examples:
+The amount of total functions that take two Booleans as an input and return one Boolean is 16. This is due to the fact that there are 4 different input possibilities (00, 01, 10, 11), and for every one of them 2 different output possibilities (0 or 1). This results in 2⁴ which is 16. Here are 4 examples:
 
 > returnFirst :: (Bool, Bool) -> Bool
 > returnFirst (a, b) = a
