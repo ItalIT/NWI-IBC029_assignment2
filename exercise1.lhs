@@ -43,3 +43,16 @@ Here are 4 examples:
 
 exercise 1.3
 ============
+
+There are many functions that take a boolean and return a function accepting
+another boolean returning a third boolean. We have two possible inputs for the
+first function and two possible inputs for the second function and two possible
+outputs so there is a total of 2^2^2 = 16 functions.
+
+Given here are some examples.
+
+> andFactory :: Bool -> Bool -> Bool
+> andFactory b = \x -> b && x
+
+> constOrFalseFactory :: Bool -> Bool -> Bool
+> constOrFalseFactory b = \x -> False || x
