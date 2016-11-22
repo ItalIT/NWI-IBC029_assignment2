@@ -10,7 +10,7 @@ div						YES
 div 7					YES
 (div 7) 4				YES
 div (7 4)				NO
-7 ‘div‘ 4				YES if the ' are meant as backticks NO otherwise
+7 ‘div‘ 4				YES IFF the ‘ are meant as backticks (difficult to see)
 + 37					NO
 (+) 3 7					YES
 (b, ’b’, "b")			YES
