@@ -76,3 +76,34 @@ exercise 6.2
 
 exercise 6.3
 ============
+(a) Int -> (Int -> Int)
+
+> a3 :: Int -> (Int -> Int)
+> a3 i = \x -> i * x
+
+(b) (Int -> Int) -> Int
+
+> b3 :: (Int -> Int) -> Int
+> b3 f = f 1
+
+(c) a -> (a -> a)
+
+> c3 :: a -> (a -> a)
+> c3 a = \x -> a
+
+(d) (a -> a) -> a
+
+I think this is not possible. We have a function that takes an a and returns an
+a but we have no a to put into the function. If we did we could just return
+that instance of a and not use the function at all.
+
+I think there are 0 functions of type (a -> a) -> a but there are practically
+infinitely many functions of type (Int -> Int) -> Int because it is easy to get
+ahold of an instance of a type if you know the type. Because we know the type is
+Int we can easily apply the function to some instance of type Int, e.g. 7.
+
+We do not even need to do that and can choose to ignore the function argument
+because we know the type we must return.
+
+(Actually because Int is finite there are only finitely many functions. There
+are as many function as there are Ints.)
