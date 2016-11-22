@@ -15,7 +15,6 @@ exercise 2.2
 
 The following function checks whether a given string only consists of digits.
 
-> import Data.Char
 > isNumeral :: String -> Bool
 > isNumeral s = and (map (\c -> isDigit c) s)
 
