@@ -21,11 +21,15 @@ abs ◦ negate            YES
 exercise 5.2
 ============
 
-(abs◦) ◦ (◦negate)      NO the function composition operator is infix
+(abs◦) ◦ (◦negate)      NO the function composition operator is infix (?)
 (div◦) ◦ (◦mod)         NO
 
 We know it does not work but are not 100% sure why. The exercise sheet says not
-to waste too much time on this however.
+to waste too much time on this however. abs and negate have matching types so
+there must be another reason why this does not work.
+
+We are not sure this is the reason but div and mod both have the type "(Real a,
+Enum a) -> Integral a" which could be the reason this expression won't work.
 
 exercise 5.3
 ============
