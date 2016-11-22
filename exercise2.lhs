@@ -50,3 +50,42 @@ exercise 2.4
 > msg :: String
 > msg = "MHILY LZA ZBHL XBPZXBL MVYABUHL HWWPBZ JSHBKPBZ "
 >       ++ "JHLJBZ KPJABT HYJUBT LZA ULBAYVU"
+
+We made the following helper functions to decrypt the message:
+
+This methods maps 'A'..'Z' as well as 'a'..'z' to 0..25. Case is not preserved
+in the conversion (because we do not need it).
+
+> fromChar :: Char -> Int
+> fromChar c
+>     | v >= capitalA && v <= capitalZ = v - capitalA
+>     | v >= a && v <= z = v - a
+>     | otherwise = error "Character is out of range."
+>     where v = ord c
+>           capitalA = ord 'A'
+>           capitalZ = ord 'Z'
+>           a = ord 'a'
+>           z = ord 'z'
+
+This function takes an integer and maps it to a character beginning at 'a'.
+
+> fromInt :: Int -> Char
+> fromInt i = chr (i + a)
+>             where a = ord 'a'
+
+This function shift a character by some integer, with roll rollover.
+"shift 1 'z'" returns 'a'
+
+> shift :: Int -> Char -> Char
+> shift i c = fromInt (mod (fromChar c + i) 26)
+
+And finally our decryption function. That shifts whole strings, skipping white
+space.
+
+> shiftString :: Int -> String -> String
+> shiftString i s = map (\c -> if (not (isSpace c)) then (shift i c) else c) s
+
+It we shift the message by 19 we get the solution: "faber est suae quisque
+fortunae appius claudius caecus dictum arcnum est neutron"
+
+The solution actually contains a typo: s/arcnum/arcanum/g
