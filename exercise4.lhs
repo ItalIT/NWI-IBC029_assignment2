@@ -24,5 +24,22 @@ This one is very tricky and will never terminate.
 exercise 4.2
 ============
 
+Again, the obvious and expected function definition:
+
+> swap2 :: (a, b) -> (b, a)
+> swap2 (a, b) = (b, a)
+
+It is the same as my original definition, it is just more generic because of the
+type definition. In the original, a and b were Ints, here they can be anything.
+
+My second definition "sameType" is not valid anymore because the input and
+output are not of the same type which means I cannot just return the input as my
+output.
+
+The third definition is still valid, still tricky, and still won't terminate.
+
+> sameTypeRecursive2 :: (a, b) -> (b, a)
+> sameTypeRecursive2 = sameTypeRecursive2
+
 exercise 4.3
 ============
