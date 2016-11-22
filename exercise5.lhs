@@ -14,7 +14,7 @@ div (7 4)				NO
 + 37					NO
 (+) 3 7					YES
 (b, ’b’, "b")			YES
-(abs, ’abs’, "abs")		YES
+(abs, ’abs’, "abs")		NO Because single quotes indicate characters
 abs ◦ negate			YES
 (∗3) ◦ (+3)				YES
 
