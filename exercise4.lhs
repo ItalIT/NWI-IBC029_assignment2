@@ -43,3 +43,17 @@ The third definition is still valid, still tricky, and still won't terminate.
 
 exercise 4.3
 ============
+
+The type "(Int, (Char, Bool))" is a 2-tuple with an Int as its first element,
+and a 2-tuple that contains a Char and a Bool as its second element.
+
+The type "(Int, Char, Bool)" is a 3-tuple with 3 elements of types Int, Char,
+and Bool.
+
+We can convert between the two types with the following functions:
+
+> threeTupleToNestedTwoTuple :: (Int, Char, Bool) -> (Int, (Char, Bool))
+> threeTupleToNestedTwoTuple (a, b, c) = (a, (b, c))
+
+> nestedTwoTupleToThreeTuple :: (Int, (Char, Bool)) -> (Int, Char, Bool)
+> nestedTwoTupleToThreeTuple (a, (b, c)) = (a, b, c)
