@@ -39,37 +39,37 @@ we know that it's of type a.
 exercise 6.2
 ============
 
-(a) (a, a) → (a, a)
+(a) (a, a) -> (a, a)
 
 > a2 :: (a, a) -> (a, a)
 > a2 x = x
 
-(b) (a, b) → (b, a)
+(b) (a, b) -> (b, a)
 
 > b2 :: (a, b) -> (b, a)
 > b2 (a, b) = (b, a)
 
-(c) (a → b) → a → b
+(c) (a -> b) -> a -> b
 
 > c2 :: (a -> b) -> a -> b
 > c2 f x = f x
 
-(d) (a, x) → a
+(d) (a, x) -> a
 
 > d2 :: (a, x) -> a
 > d2 (a, x) = a
 
-(e) (x → a → b, a, x) → b
+(e) (x -> a -> b, a, x) -> b
 
 > e2 :: (a -> b -> c, b, a) -> c
 > e2 (x, y, z) = x z y
 
-(f) (a → b, x → a, x) → b
+(f) (a -> b, x -> a, x) -> b
 
 > f2 :: (a -> c, b -> a, b) -> c
 > f2 (x, y, z) = x (y z)
 
-(g) (x → a → b, x → a, x) → b
+(g) (x -> a -> b, x -> a, x) -> b
 
 > g2 :: (b -> a -> c, b -> a, b) -> c
 > g2 (x, y, z) = (x z) (y z)
