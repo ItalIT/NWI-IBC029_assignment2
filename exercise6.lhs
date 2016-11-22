@@ -29,10 +29,15 @@ exercise 6.1
 > e :: (a, b) -> a
 > e (a, b) = a
 
+There are finitely many different total functions of type Int -> Int as there
+are finitely many machine integers. For all practical purposes there are
+infinitely many.
+There is only 1 total function of type a -> a because we do not know what type a
+is and therefore the only possibility is simply returning the argument of which
+we know that it's of type a.
+
 exercise 6.2
 ============
-
-
 
 exercise 6.3
 ============
